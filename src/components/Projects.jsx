@@ -8,12 +8,7 @@ const Projects = () => {
             tech: ["React", "Node.js", "MongoDB"],
             link: "#"
         },
-        {
-            title: "Social Media App",
-            description: "Real-time social platform with chat, posts, and notifications.",
-            tech: ["Socket.io", "React", "Express"],
-            link: "#"
-        },
+
         {
             title: "Task Management Tool",
             description: "Collaborative task manager with drag-and-drop functionality.",
