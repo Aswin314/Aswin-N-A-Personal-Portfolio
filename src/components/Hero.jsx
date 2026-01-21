@@ -51,6 +51,23 @@ const Hero = () => {
             fontWeight: 'bold',
             boxShadow: '0 4px 15px rgba(0, 242, 255, 0.3)',
             transition: 'transform 0.3s ease',
+        },
+        btnOutline: {
+            padding: '0.8rem 2rem',
+            fontSize: '1.1rem',
+            background: 'transparent',
+            border: '2px solid var(--primary-color)',
+            borderRadius: '50px',
+            color: 'white',
+            cursor: 'pointer',
+            fontWeight: 'bold',
+            transition: 'all 0.3s ease',
+        },
+        btnContainer: {
+            display: 'flex',
+            gap: '1.5rem',
+            justifyContent: 'center',
+            marginTop: '2rem',
         }
     };
 
@@ -66,11 +83,22 @@ const Hero = () => {
                 <p style={heroStyles.subtitle}>
                     Junior Software Engineer | MERN Stack Developer
                 </p>
-                <a href="#projects">
-                    <button style={heroStyles.btn} onMouseOver={(e) => e.target.style.transform = 'scale(1.05)'} onMouseOut={(e) => e.target.style.transform = 'scale(1)'}>
-                        View My Work
-                    </button>
-                </a>
+                <div style={heroStyles.btnContainer}>
+                    <a href="#projects">
+                        <button style={heroStyles.btn} onMouseOver={(e) => e.target.style.transform = 'scale(1.05)'} onMouseOut={(e) => e.target.style.transform = 'scale(1)'}>
+                            View My Work
+                        </button>
+                    </a>
+                    <a href="https://drive.google.com/file/d/1FeU9SkAGPe4hPD99cWI6HDs63kAHopeK/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">
+                        <button
+                            style={heroStyles.btnOutline}
+                            onMouseOver={(e) => { e.target.style.background = 'rgba(0, 242, 255, 0.1)'; e.target.style.transform = 'scale(1.05)'; }}
+                            onMouseOut={(e) => { e.target.style.background = 'transparent'; e.target.style.transform = 'scale(1)'; }}
+                        >
+                            View Resume
+                        </button>
+                    </a>
+                </div>
             </div>
         </section>
     );
